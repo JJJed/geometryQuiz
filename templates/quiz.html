@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div id="h1t"><h1>Geometry Quiz</h1></div>
+    <form id="quiz" action="" method="post">
+
+        <h2 id="desc">This is a quiz/survey about triangle congruence, <br>this form will ask you to provide your name and answer several questions about proving triangles congruent, <br>and will give you your score afterwards.<br></h2><br>
+        <!--<h4><b>Note:</b><br>Answers are case sensitive.</h4><br>-->
+
+        <h3>So first off we'll just start of with your first name. <br>What should I call you?</h3><br>
+        {{form.name.label}}<br>
+        {{form.name(size=30)}}<br><br>
+
+        <h3>Alright, so now that we've got that done with, let's get right into the questions.</h3><br>
+
+        {{form.asa.label}}<br>
+        {{form.asa(size=30)}}<br><br>
+
+        {{form.sas.label}}<br>
+        {{form.sas(size=30)}}<br><br>
+
+        {{form.aaa.label}}<br>
+        {{form.aaa(size=30)}}<br><br>
+
+        {{form.sss.label}}<br>
+        {{form.sss(size=30)}}<br><br>
+
+        {{form.aas.label}}<br>
+        {{form.aas(size=30)}}<br><br>
+
+        {{form.ssa.label}}<br>
+        {{form.ssa(size=30)}}<br><br>
+
+        {{form.submit()}}
+    </form>
+
+{% endblock %}

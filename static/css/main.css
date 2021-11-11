@@ -1,0 +1,72 @@
+@font-face {
+    font-family: ubuntu-med;
+    src: url("../Fonts/Ubuntu/Ubuntu-Medium.ttf");
+}
+
+body {
+    background-color: #9dc6d8;
+    overflow: scroll;
+    overflow-x: hidden;
+    font-family: ubuntu-med, sans-serif;
+}
+
+h1 {
+    color: #e38690;
+    font-size: 8vh;
+    font-family: ubuntu-med, sans-serif;
+    margin-left: 1vw;
+    padding: 0;
+    margin: 0;
+}
+
+#h1t {
+    height: 8vh;
+    position: absolute;
+    top: 1vh;
+    margin-bottom: 1vh;
+    left: 3vw;
+}
+
+h2 {
+    color: #1d4e89;
+}
+
+h3 {
+    color: #965251;
+}
+
+#quiz {
+    border: 3px solid #f69256;
+    padding-left: 3vw;
+    margin-left: 0;
+    margin-right: 55vw;
+    padding-bottom: 3vh;
+    padding-top: 1.5vh;
+    height: 80vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    top: 11vh;
+    height: 80vh;
+    left: 3vw;
+}
+
+.txt {
+    position: relative;
+    background-color: #ead98b;
+}
+
+table {
+    border: 2px solid #f69256;
+    text-align: center;
+    margin-left: 1vw;
+    font-size: 3vh;
+}
+
+th {
+    border: 2px solid #965251;
+}
+
+td {
+    border: 1px solid #f69256;
+}

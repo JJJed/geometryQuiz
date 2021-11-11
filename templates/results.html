@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div id="h1tr"><h1>Geometry Quiz - Results</h1></div>
+
+    <div id="h2tr">
+        <h2>Hi {% for key,value in result.items() %}
+                {% if key == "name" %}
+                    {{ value }}
+                {% endif %}
+            {% endfor %}, here are your quiz results!
+        </h2>
+    </div>
+
+    <table border="1" id="rTable">
+        <tr>
+            <th>Method</th>
+            <th>Correct Answer</th>
+            <th>Your Answer</th>
+            <th>Score</th>
+        </tr>
+        {% for key,value in result.items() %}
+            {% if key == "asa" %}
+                <tr>
+                    <td>ASA</td>
+                    <td>T</td>
+                    <td>{{ value }}</td>
+                    <td id="asaScore" class="iScore">
+                        {% if value == "T" or "t" %}
+                            1/1
+                        {% else %}
+                            0/1
+                        {% endif %}
+                    </td>
+                </tr>
+            {% elif key == "sas" %}
+                <tr>
+                    <td>SAS</td>
+                    <td>T</td>
+                    <td>{{ value }}</td>
+                    <td id="sasScore" class="iScore">
+                        {% if value == "T" or "t" %}
+                            1/1
+                        {% else %}
+                            0/1
+                        {% endif %}
+                    </td>
+                </tr>
+            {% elif key == "aaa" %}
+                <tr>
+                    <td>AAA</td>
+                    <td>F</td>
+                    <td>{{ value }}</td>
+                    <td id="aaaScore" class="iScore">
+                        {% if value == "F" or "t" %}
+                            1/1
+                        {% else %}
+                            0/1
+                        {% endif %}
+                    </td>
+                </tr>
+            {% elif key == "sss" %}
+                <tr>
+                    <td>SSS</td>
+                    <td>T</td>
+                    <td>{{ value }}</td>
+                    <td id="sssScore" class="iScore">
+                        {% if value == "T" or "t" %}
+                            1/1
+                        {% else %}
+                            0/1
+                        {% endif %}
+                    </td>
+                </tr>
+            {% elif key == "aas" %}
+                <tr>
+                    <td>AAS</td>
+                    <td>T</td>
+                    <td>{{ value }}</td>
+                    <td id="aasScore" class="iScore">
+                        {% if value == "T" or "t" %}
+                            1/1
+                        {% else %}
+                            0/1
+                        {% endif %}
+                    </td>
+                </tr>
+            {% elif key == "ssa" %}
+                <tr>
+                    <td>SSA</td>
+                    <td>F</td>
+                    <td>{{ value }}</td>
+                    <td id="ssaScore" class="iScore">
+                        {% if value == "F" or "t" %}
+                            1/1
+                        {% else %}
+                            0/1
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+
+    <h2 id="finalScore"></h2>
+    <script type="text/javascript">
+        var score = 0;
+        $(".iScore").each(function() {
+            console.log($(this).html());
+            var text = $(this).html();
+            if (text.search("1/1") != -1) {
+                score++;
+            }
+        });
+        $("#finalScore").html("Your final score is: " + score + "/6!");
+    </script>
+{% endblock %}
