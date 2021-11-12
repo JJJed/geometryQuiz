@@ -2,6 +2,7 @@ from flask import Flask, render_template, redirect, request, url_for
 from forms import QuizForm
 
 app = Flask(__name__)
+application = app
 app.config["SECRET_KEY"] = "1234-asdf-!@#$-ASDF"
 
 
@@ -17,3 +18,4 @@ def home():
 
 if __name__ == '__main__':
     app.run()
+
